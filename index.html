@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="display: flex; justify-content: space-between; flex-direction:column;">
+    <input type="text" id="pricee" name="pricee" placeholder=" سعر الفاتورة "><br><br>
+    <p id="pricef"></p><br><br>
+    <button id="price-button">قيمة الضربية</button><br><br>
+    <input type="text" id="pricee1" name="pricee1" placeholder="عدد الاشخاص"><br><br>
+    <p id="pricef1"></p><br><br>
+    <button id="price-button1">تقسيم الفاتورة</button>
+</div>
+    <script>
+        let pricee=document.getElementById("pricee")
+        let priceButton=document.getElementById("price-button")
+        let pricef=document.getElementById("pricef")
+        priceButton.addEventListener("click", function pricefun(){
+            pricef.innerHTML=(pricee.value)*15/100
+        })
+        //======================================
+        let pricee1=document.getElementById("pricee1")
+        let priceButton1=document.getElementById("price-button1")
+        let pricef1=document.getElementById("pricef1")
+        priceButton1.addEventListener("click", function pricefun1(){
+            pricef1.innerText=pricee.value/pricee1.value
+        })
+    </script>
+</body>
+</html>
